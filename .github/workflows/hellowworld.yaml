@@ -1,0 +1,24 @@
+name: Manual Message Printer
+
+# -----------------------------------------------------------
+# Trigger: Manual only (workflow_dispatch)
+# -----------------------------------------------------------
+on:
+  workflow_dispatch:
+    # Optional inputs if you want to pass data during manual run,
+    # but not strictly needed for just printing fixed text.
+    inputs:
+      name:
+        description: 'Your Name'
+        required: false
+        default: 'User'
+
+jobs:
+  print-messages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1: Print Hello Message
+        run: echo "hello, ${{ github.event.inputs.name }}!"
+
+      - name: Step 2: Print Bye Message
+        run: echo "bye!"
