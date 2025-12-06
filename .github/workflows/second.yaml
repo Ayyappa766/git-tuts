@@ -1,0 +1,11 @@
+name: second
+on: 
+    workflow_dispatch:
+    schedule:
+      cron: "* /2 * * *"
+jobs:
+    echo:
+     runs-on: ubuntu-latest
+    steps:
+      -name: "show the trigger"
+       run: echo "trugger type"
