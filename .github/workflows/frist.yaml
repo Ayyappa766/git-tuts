@@ -1,0 +1,19 @@
+name: buiding blocks
+
+on: push
+
+jobs: 
+    echo-hellow:
+        runs-on: ubuntu-latest
+        steps:
+          - name: say hellow
+            run: echo "helow world?"
+    echo-goodbye:
+        runs-on: ubutu-latest
+        steps:
+            - name: failed step
+              run:
+                echo "i will fail"
+                exit 1
+            - name: say good bye
+              run: echo "good bye"
