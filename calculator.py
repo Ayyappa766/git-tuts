@@ -11,7 +11,7 @@ def multiply(n1, n2):
     return n1 * n2
 
 def divide(n1, n2):
-    """Divides two numbers. Handles division by zero error."""
+   
     if n2 == 0:
         return "Error! Division by zero."
     return n1 / n2
